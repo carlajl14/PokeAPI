@@ -10,8 +10,6 @@ class PokemonView {
             $url = $p['url'];
             $parts = explode('/', rtrim($url, '/'));
             $number = $parts[count($parts) - 1];
-            //$number = substr($p['url'], -3, -1);
-            //$url = substr($p['url'], -2, -1);
             $numbers = $parts[count($parts) - 1];
             
             if ($number <= 9) {
@@ -38,10 +36,8 @@ class PokemonView {
         }
         echo '</div>';
         echo '<div class="card-body">';
-        //foreach($pokemon['sprites'] as $p) {
         $poke = $pokemon['sprites'];
         echo '<img src="'. $poke['front_default'] .'"/>';
-        //}
         echo '</div>';
         echo '</div>';
         echo '</div>';
